@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color> <!-- 纯白色 -->
+    <color name="white_antique">#FAEBD7</color> <!-- 古董白 -->
+    <color name="white_flower">#FFFAF0</color> <!-- 花白 -->
+    <color name="white_ivory">#FAFFF0</color> <!-- 象牙白 -->
+    <color name="white_snow">#FFFAFA</color> <!-- 雪白 -->
+    <color name="grey_252525">#252525</color>
+    <color name="black">#000000</color> <!-- 纯黑色 -->
+    <color name="black_ivory">#292421</color> <!-- 象牙黑 -->
+
+    <color name="grey">#C0C0C0</color> <!-- 灰色 -->
+    <color name="grey_cold">#808A87</color> <!-- 冷灰色 -->
+    <color name="grey_flagstone">#708069</color> <!-- 石板灰 -->
+    <color name="grey_warm">#808069</color> <!-- 暖灰色 -->
+    <color name="grey_light">#f2f2f2</color><!-- 淡灰色 -->
+    <color name="grey_dark">#999999</color> <!-- 深灰 -->
+    <color name="grey_a6f4f4f4">#a6f4f4f4</color> <!-- 深灰 -->
+
+    <color name="red">#FF0000</color> <!-- 红色 -->
+    <color name="red_brick">#9C661F</color> <!-- 砖红 -->
+    <color name="red_brick_refractory">#B22222</color> <!-- 耐火砖红 -->
+    <color name="red_cadmium">#E3170D</color> <!-- 镉红 -->
+    <color name="red_indian">#B0171F</color> <!-- 印度红 -->
+    <color name="red_maroon">#B03060</color> <!-- 栗色 -->
+    <color name="red_pink">#FFC0CB</color> <!-- 粉红 -->
+    <color name="red_strawberry">#872657</color> <!-- 草莓色 -->
+    <color name="red_orange">#FA8072</color> <!-- 橙红色 -->
+    <color name="red_tomato">#FF6347</color> <!-- 蕃茄红 -->
+    <color name="red_vermilion">#FF4500</color> <!-- 桔红 -->
+    <color name="red_peony">#FF00FF</color> <!-- 深红色 -->
+    <color name="red_c33146">#c33146</color>
+    <color name="red_db3850">#db3850</color>
+
+    <color name="brown">#802A2A</color> <!-- 棕色 -->
+    <color name="brown_thick">#8A360F</color> <!-- 锻浓黄土色 -->
+    <color name="brown_Forging">#802A2A</color> <!-- 锻棕土色 -->
+    <color name="chocolate">#D2691E</color> <!-- 巧克力色 -->
+    <color name="fleshcolor">#FF7D40</color> <!-- 肉色 -->
+    <color name="cream_coloured">#A39480</color> <!-- 米色 -->
+
+    <color name="orange">#FF6100</color> <!-- 橙色 -->
+    <color name="orange_cadmium">#FF6103</color> <!-- 镉橙 -->
+    <color name="carrot">#ED9121</color> <!-- 胡萝卜色 -->
+    <color name="orange_yellow">#FF8000</color> <!-- 桔黄 -->
+
+    <color name="yellow">#FFFF00</color> <!-- 黄色 -->
+    <color name="yellow_banana">#E3CF57</color> <!-- 香蕉色 -->
+    <color name="yellow_cadmopone">#FF9912</color> <!-- 镉黄 -->
+    <color name="yellow_golden">#FFD700</color> <!-- 金黄色 -->
+    <color name="yellow_dougello">#EB8E55</color> <!-- dougello -->
+    <color name="yellow_forum">#FFE384</color> <!-- forum -->
+
+    <color name="green">#00FF00</color> <!-- 绿色 -->
+    <color name="green_forest">#228B22</color> <!-- 森林绿 -->
+    <color name="green_Kelly">#7FFF00</color> <!-- 黄绿色 -->
+    <color name="green_Cobalt">#3D9140</color> <!-- 钴绿色 -->
+    <color name="green_viridis">#00C957</color> <!-- 翠绿色 -->
+    <color name="green_grass">#7CFC00</color> <!-- 草地绿 -->
+
+    <color name="cyan">#00FFFF</color> <!-- 青色 -->
+    <color name="cyan_aquamarine">#7FFFD4</color> <!-- 碧绿色 -->
+    <color name="cyan_Verona">#385E0F</color> <!-- 绿土 -->
+    <color name="cyan_indigo">#082E54</color> <!-- 靛青 -->
+    <color name="cyan_turquoise">#40E0D0</color> <!-- 青绿色 -->
+
+    <color name="blue">#0000FF</color> <!-- 蓝色 -->
+    <color name="blue_mazarine">#191970</color> <!-- 深蓝色 -->
+    <color name="blue_patina">#3D59AB</color> <!-- 钴色 -->
+    <color name="blue_dodger">#1E90FF</color> <!-- dodger -->
+    <color name="blue_jackie">#0B1746</color> <!-- jackie -->
+    <color name="blue_meng">#03A89E</color> <!-- 锰蓝 -->
+    <color name="blue_peacock">#33A1C9</color> <!-- 孔雀蓝 -->
+    <color name="blue_turquoise">#00C78C</color> <!-- 土耳其玉色 -->
+    <color name="blue_powder">#B0E0E6</color> <!-- 浅灰蓝色 -->
+    <color name="blue_reddish">#4169E1</color> <!-- 品蓝 -->
+    <color name="blue_Slate">#6A5ACD</color> <!-- 石板蓝 -->
+    <color name="blue_sky">#87CEEB</color> <!-- 天蓝 -->
+
+    <color name="purple">#A020F0</color> <!-- 紫色 -->
+    <color name="purple_lavender">#DA70D6</color> <!-- 淡紫色 -->
+    <color name="purple_violet">#8A2BE2</color> <!-- 紫罗蓝色 -->
+    <color name="purple_jasoa">#A066D3</color> <!-- jasoa -->
+    <color name="purple_rian">#9933FA</color> <!-- 湖紫色 -->
+    <color name="purple_plum">#DDA0DD</color> <!-- 梅红色 -->
+    <color name="grey_d5d5d5">#d5d5d5</color> <!-- 象牙黑 -->
+    <color name="grey_999999">#999999</color> <!-- 象牙黑 -->
+
+    <!--背景色-->
+    <color name="bg_f0f0f0">#f0f0f0</color>
+    <color name="bg_f8f8f8">#f8f8f8</color>
+    <color name="bg_eeeeee">#eeeeee</color>
+    <color name="bg_ffd03f">#ffd03f</color>
+    <color name="bg_d8d8d8">#d8d8d8</color>
+    <color name="bg_ee8703">#ee8703</color>
+
+    <!--透明色-->
+    <color name="transparent">#00000000</color>
+    <color name="transparent_99000000">#99000000</color>
+    <color name="transparent_b0000000">#e0666666</color>
+    <color name="transparent_CCa9f29">#CCfa9f29</color>
+
+</resources>
