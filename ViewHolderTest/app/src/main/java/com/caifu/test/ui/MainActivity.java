@@ -35,7 +35,6 @@ public class MainActivity extends Activity {
 
             @Override
             public void loadMoreData(int pageNow, int pageSize) {
-
                 AbstractLineData lineData = null;
                 ArrayList<TestBean> list = new ArrayList<TestBean>();
                 if (pageNow % 3 == 0) {
@@ -54,8 +53,6 @@ public class MainActivity extends Activity {
                         list.add(new TestBean(("单列同学" + (pageNow * pageSize + i)), "女"));
                     }
                 }
-
-
                 containerView.addData(lineData.list2LineData(list), false);
             }
 
