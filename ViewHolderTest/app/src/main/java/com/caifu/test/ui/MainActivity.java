@@ -39,6 +39,7 @@ public class MainActivity extends Activity {
 
             @Override
             public void loadMoreData(int pageNow, int pageSize) {
+                //延时一秒，模拟网络加载时间
                 Observable timerObservable = Observable.timer(1, TimeUnit.SECONDS, AndroidSchedulers.mainThread());
                 timerObservable.subscribe(v -> {
                     AbstractLineData lineData = null;
@@ -65,6 +66,7 @@ public class MainActivity extends Activity {
 
             @Override
             public void refreshData(int pageSize) {
+                //延时一秒，模拟网络加载时间
                 Observable timerObservable = Observable.timer(1, TimeUnit.SECONDS, AndroidSchedulers.mainThread());
                 timerObservable.subscribe(v -> {
                     SingleTestLineData lineData = new SingleTestLineData();
