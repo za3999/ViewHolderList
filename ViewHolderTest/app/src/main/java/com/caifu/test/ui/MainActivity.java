@@ -12,6 +12,10 @@ import com.caifu.test.linedata.SingleTestLineData;
 import com.caifu.test.linedata.ThreeTestLineData;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+
+import rx.Observable;
+import rx.android.schedulers.AndroidSchedulers;
 
 /**
  * Created by zhengcaifu on 2017/3/6.
@@ -35,37 +39,42 @@ public class MainActivity extends Activity {
 
             @Override
             public void loadMoreData(int pageNow, int pageSize) {
-                AbstractLineData lineData = null;
-                ArrayList<TestBean> list = new ArrayList<TestBean>();
-                if (pageNow % 3 == 0) {
-                    lineData = new ThreeTestLineData();
-                    for (int i = 0; i < pageSize; i++) {
-                        list.add(new TestBean(("3列同学" + (pageNow * pageSize + i)), "女"));
+                Observable timerObservable = Observable.timer(1, TimeUnit.SECONDS, AndroidSchedulers.mainThread());
+                timerObservable.subscribe(v -> {
+                    AbstractLineData lineData = null;
+                    ArrayList<TestBean> list = new ArrayList<TestBean>();
+                    if (pageNow % 3 == 0) {
+                        lineData = new ThreeTestLineData();
+                        for (int i = 0; i < pageSize; i++) {
+                            list.add(new TestBean(("3列同学" + (pageNow * pageSize + i)), "女"));
+                        }
+                    } else if ((pageNow % 3 == 1)) {
+                        lineData = new DoubleTestLineData();
+                        for (int i = 0; i < pageSize; i++) {
+                            list.add(new TestBean(("双列同学" + (pageNow * pageSize + i)), "女"));
+                        }
+                    } else {
+                        lineData = new SingleTestLineData();
+                        for (int i = 0; i < pageSize; i++) {
+                            list.add(new TestBean(("单列同学" + (pageNow * pageSize + i)), "女"));
+                        }
                     }
-                } else if ((pageNow % 3 == 1)) {
-                    lineData = new DoubleTestLineData();
-                    for (int i = 0; i < pageSize; i++) {
-                        list.add(new TestBean(("双列同学" + (pageNow * pageSize + i)), "女"));
-                    }
-                } else {
-                    lineData = new SingleTestLineData();
-                    for (int i = 0; i < pageSize; i++) {
-                        list.add(new TestBean(("单列同学" + (pageNow * pageSize + i)), "女"));
-                    }
-                }
-                containerView.addData(lineData.list2LineData(list), false);
+                    containerView.addData(lineData.list2LineData(list), false);
+                });
             }
 
             @Override
             public void refreshData(int pageSize) {
-                SingleTestLineData lineData = new SingleTestLineData();
-                ArrayList<TestBean> list = new ArrayList<TestBean>();
-                for (int i = 0; i < pageSize; i++) {
-                    list.add(new TestBean(("单列同学" + i), "男"));
-                }
-                containerView.setData(lineData.list2LineData(list), false);
+                Observable timerObservable = Observable.timer(1, TimeUnit.SECONDS, AndroidSchedulers.mainThread());
+                timerObservable.subscribe(v -> {
+                    SingleTestLineData lineData = new SingleTestLineData();
+                    ArrayList<TestBean> list = new ArrayList<TestBean>();
+                    for (int i = 0; i < pageSize; i++) {
+                        list.add(new TestBean(("单列同学" + i), "男"));
+                    }
+                    containerView.setData(lineData.list2LineData(list), false);
+                });
             }
-
         });
         containerView.initData();
     }
