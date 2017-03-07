@@ -7,7 +7,7 @@
 
 
     <ProgressBar
-        android:id="@+id/animProgress"
+        android:id="@+id/loading_Progress"
         style="@style/loading"
         android:layout_width="20dip"
         android:layout_height="20dip"/>

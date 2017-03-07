@@ -56,14 +56,6 @@ public class DefaultLineDataContainerView extends RelativeLayout implements Swip
         init(context);
     }
 
-    public void setNoDataContent(String noDataContent) {
-        emptyView.setNoDataContent(noDataContent);
-    }
-
-    public void setNoDataContent(String noDataContent, View.OnClickListener onClickListener) {
-        emptyView.setAction(noDataContent, onClickListener);
-    }
-
     private void init(Context context) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.defult_list_layout, this, true);
@@ -71,7 +63,11 @@ public class DefaultLineDataContainerView extends RelativeLayout implements Swip
                 ViewGroup.LayoutParams.MATCH_PARENT);
         view.setLayoutParams(params);
         listView = (ListView) view.findViewById(R.id.list_view);
-        emptyView = (EmptyView) view.findViewById(R.id.error_layout);
+        emptyView = (EmptyView) view.findViewById(R.id.empty_view);
+        emptyView.setOnClickListener(v -> {
+            loadDataListener.refreshData(pageSize);
+
+        });
         footerView = inflater.inflate(R.layout.load_more_view, null);
         listView.addFooterView(footerView);
         refreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.srl_list);
@@ -194,10 +190,10 @@ public class DefaultLineDataContainerView extends RelativeLayout implements Swip
             emptyView.setVisibility(View.VISIBLE);
             if (NetWorkUtil.isNetworkConnected(getContext())) {
                 isLoading = true;
-                emptyView.setErrorType(EmptyView.NETWORK_LOADING);
+                emptyView.setViewType(EmptyView.NETWORK_LOADING);
                 loadDataListener.refreshData(pageSize);
             } else {
-                emptyView.setErrorType(EmptyView.NETWORK_ERROR);
+                emptyView.setViewType(EmptyView.NETWORK_ERROR);
             }
         }
     }
@@ -218,7 +214,7 @@ public class DefaultLineDataContainerView extends RelativeLayout implements Swip
             pageNow++;
         } else {
             emptyView.setVisibility(View.VISIBLE);
-            emptyView.setErrorType(EmptyView.NODATA);
+            emptyView.setViewType(EmptyView.NO_DATA);
         }
         ((TextView) footerView.findViewById(R.id.tv_more)).setText(R.string.ms_load_more);
         if (!scrollLoadingEnable || isDataFinished) {
