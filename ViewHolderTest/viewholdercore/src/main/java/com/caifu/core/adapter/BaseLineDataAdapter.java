@@ -19,25 +19,25 @@ import java.util.List;
 public class BaseLineDataAdapter extends BaseAdapter {
 
     protected Context mContext;
-    protected List<ILineData> lineDatas = new ArrayList<ILineData>();
+    protected List<ILineData> linesData = new ArrayList<ILineData>();
 
     public BaseLineDataAdapter(Context context) {
         mContext = context;
     }
 
     public void setData(List<ILineData> data) {
-        lineDatas.clear();
-        lineDatas.addAll(data);
+        linesData.clear();
+        linesData.addAll(data);
     }
 
     @Override
     public int getCount() {
-        return lineDatas.size();
+        return linesData.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return lineDatas.get(position);
+        return linesData.get(position);
     }
 
     @Override
@@ -48,7 +48,7 @@ public class BaseLineDataAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View returnView = convertView;
-        ILineData lineData = lineDatas.get(position);
+        ILineData lineData = linesData.get(position);
         if (lineData != null) {
             BaseViewHolder holder;
             if (returnView == null) {
@@ -66,7 +66,7 @@ public class BaseLineDataAdapter extends BaseAdapter {
 
     @Override
     public int getItemViewType(int position) {
-        return ViewHolderHelper.getViewHolderType(lineDatas.get(position).getClass());
+        return ViewHolderHelper.getViewHolderType(linesData.get(position).getClass());
     }
 
     @Override
@@ -74,7 +74,7 @@ public class BaseLineDataAdapter extends BaseAdapter {
         return ViewHolderHelper.getViewHolderTypesCount();
     }
 
-    public List<ILineData> getLineDatas() {
-        return lineDatas;
+    public List<ILineData> getLinesData() {
+        return linesData;
     }
 }

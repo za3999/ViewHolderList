@@ -236,8 +236,8 @@ public class DefaultLineDataContainerView extends RelativeLayout implements Swip
     public void addData(List<ILineData> dataList, boolean finish) {
         if (dataList != null && dataList.size() > 0) {
             pageNow++;
-            if (dataAdapter.getLineDatas().size() > 0) {
-                dataAdapter.setData(mergeStrategy.merge(dataList, dataAdapter.getLineDatas()));
+            if (dataAdapter.getLinesData().size() > 0) {
+                dataAdapter.setData(mergeStrategy.merge(dataList, dataAdapter.getLinesData()));
             } else {
                 dataAdapter.setData(dataList);
             }
@@ -268,7 +268,7 @@ public class DefaultLineDataContainerView extends RelativeLayout implements Swip
      */
     protected int getLoadingStartIndex() {
         int start = 0;
-        for (ILineData lineData : dataAdapter.getLineDatas()) {
+        for (ILineData lineData : dataAdapter.getLinesData()) {
             start = start + lineData.getMemberSize();
         }
         return start;
